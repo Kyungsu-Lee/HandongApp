@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ghost.android.ghosthguapp.notice.NoticeMain"
+    android:background="@color/white">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="7dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/notice_title_general"
+            android:textSize="17dp"
+            android:id="@+id/tab_notice_general"
+            android:background="@drawable/listview_selector_yasick"
+            android:textColor="@color/notice_background"/>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/border1"
+                android:background="@color/notice_background"/>
+
+        </LinearLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_classnotice"
+            android:textSize="17dp"
+            android:id="@+id/tab_notice_class"
+            android:background="@drawable/notice_selected_border"
+            android:textColor="@color/notice_background"/>
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/border2"
+                android:background="@color/notice_background"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tab_notice_material"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_notice_material"
+            android:textSize="17dp"
+            android:background="@drawable/listview_selector_yasick"
+            android:textColor="@color/notice_background"/>
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/border3"
+                android:background="@color/notice_background"/>
+
+        </LinearLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_notice_hw"
+            android:textSize="17dp"
+            android:id="@+id/tab_notice_hw"
+            android:background="@drawable/listview_selector_yasick"
+            android:textColor="@color/notice_background"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container_notice"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"></FrameLayout>
+</RelativeLayout>

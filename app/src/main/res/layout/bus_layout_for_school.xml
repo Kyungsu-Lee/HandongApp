@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@color/main_bus">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="학교행"
+            android:id="@+id/text_school"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/linearLayout3">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton"
+                android:background="@drawable/alarm_3" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="흥해"
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/go_to_heunghae"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="언제?"
+            android:id="@+id/pyeongill_or_zoomal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/text_school"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:id="@+id/divider"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/linearLayout3"
+            android:background="@color/white"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="4dp" />
+
+        <LinearLayout
+            android:layout_width="18dp"
+            android:layout_height="23dp"
+            android:id="@+id/linearLayout12"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/divider">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bus_location"
+                android:background="@drawable/bus_location" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        android:background="@color/bus_actionbar_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/listView2"
+                android:divider="@color/transparent"
+                android:listSelector="@color/transparent"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_toLeftOf="@+id/go_to_yookgeory_button"
+                android:scrollbars="none"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout2"
+                android:background="#ffebebeb"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView17"
+                    android:layout_weight="2" />
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="육거리"
+                    android:id="@+id/textView"
+                    android:singleLine="true"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=">"
+                    android:id="@+id/textView2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="환호동"
+                    android:id="@+id/textView3"
+                    android:singleLine="true"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=">"
+                    android:id="@+id/textView4"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="학교"
+                    android:id="@+id/textView5"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView18"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=">\n육\n거\n리\n행"
+                android:id="@+id/go_to_yookgeory_button"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_weight="1"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

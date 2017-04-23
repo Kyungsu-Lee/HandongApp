@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/professor_item"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:orientation="vertical">
+
+        <ghost.android.ghosthguapp.common.AutoResizeTextView
+            android:id="@+id/professor_item_major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:singleLine="true"
+            android:text="소속"
+            android:textColor="@color/disabled"
+            android:textSize="15dp" />
+
+        <ghost.android.ghosthguapp.common.AutoResizeTextView
+            android:id="@+id/professor_item_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="054-260-1234"
+            android:textColor="@color/disabled"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:orientation="vertical">
+
+        <ghost.android.ghosthguapp.common.AutoResizeTextView
+            android:id="@+id/professor_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:textColor="@color/disabled"
+            android:layout_margin="5dp"
+            android:text="Nicholas Scott Lantinga"
+            android:textSize="15dp" />
+
+        <ghost.android.ghosthguapp.common.AutoResizeTextView
+            android:id="@+id/professor_item_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:singleLine="true"
+            android:text="메일주소"
+            android:textColor="@color/disabled"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <ghost.android.ghosthguapp.common.AutoResizeTextView
+        android:id="@+id/professor_item_office"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="HDH 322B"
+        android:textColor="@color/disabled"
+        android:textSize="15dp" />
+
+</LinearLayout>

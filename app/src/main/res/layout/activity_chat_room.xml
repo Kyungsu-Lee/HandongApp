@@ -1,0 +1,174 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/dl_activity_main_drawer"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="ghost.android.ghosthguapp.carpool.chat_room.chat_roomActivity">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+    <FrameLayout android:id="@+id/fl_activity_main_container" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|top"
+            android:weightSum="1"
+            >
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:id="@+id/listView3"
+                android:layout_weight="1.00"
+                android:choiceMode="multipleChoice"
+                android:textFilterEnabled="false"
+                android:dividerHeight="0px"
+                android:divider="#ffffff"
+                android:listSelector="#00000000"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/chat_color"
+                android:layout_gravity="bottom">
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/editText"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:imeOptions="normal"
+                    android:singleLine="false"
+                    android:background="@color/white"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="보내기"
+                    android:id="@+id/button3"
+                    android:background="@drawable/chaticon_send"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:clickable="false"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:dividerHeight="0dp"
+        android:background="#cccc"
+        android:orientation="vertical"
+        android:id="@+id/drawer_container"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:layout_margin="5dp">
+
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btn_alrim"
+                android:background="@drawable/btn_alrim"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton2"
+
+                android:background="@drawable/chatmenu_mymenu_chat"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="onGoMyPageClicked" />
+
+        </LinearLayout>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:choiceMode="singleChoice"
+
+            android:divider="@android:color/transparent" android:dividerHeight="0dp"
+            android:layout_gravity="end"
+            android:id="@+id/lv_activity_main_nav_list"
+            android:smoothScrollbar="false"
+            android:layout_weight="1.5">
+        </ListView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:onClick="hihi">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageButton3"
+                    android:onClick="onButtonGetOutClicked"
+                    android:background="@drawable/btn_exit"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <!-- android:layout_gravity="start" tells DrawerLayout to treat
+         this as a sliding drawer on the  left side for left-to-right
+         languages and on the right side for right-to-left languages.
+         If you're not building against API 17 or higher, use
+         android:layout_gravity="left" instead. -->
+    <!-- The drawer is given a fixed width in dp and extends the full height of
+         the container. -->
+
+</android.support.v4.widget.DrawerLayout>

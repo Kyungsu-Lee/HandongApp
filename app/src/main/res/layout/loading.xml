@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loading_back"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/loading_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:adjustViewBounds="true"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/handong" />
+
+    <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        sl:scale_base_height="100"
+        sl:scale_base_width="100">
+        >
+
+        <ImageView
+            android:id="@+id/loading_buffering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            sl:scale_height="60"
+            sl:scale_left="20"
+            sl:scale_top="20"
+            sl:scale_width="60"
+            android:src="@drawable/buffering" />
+
+    </ghost.android.ghosthguapp.common.ScalableLayout>
+
+    <ImageView
+        android:id="@+id/loading_map"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:adjustViewBounds="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/map" />
+
+    <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.5"
+        sl:scale_base_height="100"
+        sl:scale_base_width="400">
+
+
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="잠시만 기다려주세요.."
+            sl:scale_height="100"
+            sl:scale_left="0"
+            sl:scale_textsize="30"
+            sl:scale_top="0"
+            sl:scale_width="400" />
+
+    </ghost.android.ghosthguapp.common.ScalableLayout>
+
+</LinearLayout>

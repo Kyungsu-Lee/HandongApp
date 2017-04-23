@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingTop="7dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+    <LinearLayout
+        android:id="@+id/notice_general_buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/notice_general_main"
+            android:id="@+id/button_general_mainnotice"
+            android:background="@color/notice_background"
+            android:textColor="#FFFFFF"
+            android:textSize="13dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/notice_general_all"
+            android:id="@+id/button_general_allnotice"
+            android:background="@drawable/notice_general_button_border"
+            android:textColor="@color/notice_background"
+            android:textSize="13dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/general_category_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/notice_general_buttons">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:textSize="13dp"
+            android:gravity="center"
+            android:text="@string/notice_article_num"
+            android:id="@+id/general_tv_list_num" />
+
+         <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="22"
+            android:textSize="13dp"
+            android:gravity="center"
+            android:text="@string/notice_article_title"
+            android:id="@+id/general_tv_list_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/general_bottombar_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center">
+
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:id="@+id/general_btn_left"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/left_arrow"
+                android:scaleType="fitCenter"
+                android:padding="7dp"
+                android:visibility="invisible"/>
+
+            <Button
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:text="@string/page_1"
+                android:id="@+id/general_btn_1"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/page_button_default"
+                android:visibility="invisible"/>
+
+            <Button
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:text="@string/page_2"
+                android:id="@+id/general_btn_2"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/page_button_default"
+                android:visibility="invisible"/>
+
+            <Button
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:text="@string/page_3"
+                android:id="@+id/general_btn_3"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/page_button_default"
+                android:visibility="invisible"/>
+
+            <Button
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:text="@string/page_4"
+                android:id="@+id/general_btn_4"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/page_button_default"
+                android:visibility="invisible"/>
+
+            <Button
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:text="@string/page_5"
+                android:id="@+id/general_btn_5"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/page_button_default"
+                android:visibility="invisible"/>
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+
+                android:id="@+id/general_btn_right"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/right_arrow"
+                android:scaleType="fitCenter"
+                android:padding="7dp"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/general_article_listview"
+        android:layout_below="@id/general_category_bar"
+        android:layout_marginBottom="42dp"
+        android:fadeScrollbars="false"/>
+</RelativeLayout>

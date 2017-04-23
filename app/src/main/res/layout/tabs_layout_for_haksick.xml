@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <FrameLayout
+        android:layout_weight = "0"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/fragment_container"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/linearLayout" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width = "0dp"
+            android:layout_weight = "1"
+            android:text="학생식당"
+            android:id="@+id/haksick_button"
+            android:layout_gravity="left|center"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_selector"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="17dp" />
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width = "0dp"
+            android:layout_weight = "1"
+            android:text="맘스키친"
+            android:id="@+id/moms_button"
+            android:layout_gravity="center"
+            android:background="@drawable/tab_selector"
+            android:textColor="@drawable/tab_text_selector"
+            android:layout_height="wrap_content"
+            android:textSize="17dp" />
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width = "0dp"
+            android:layout_weight = "1"
+            android:text="또랑"
+            android:id="@+id/hyoam_button"
+            android:background="@drawable/tab_selector"
+            android:textColor="@drawable/tab_text_selector"
+            android:layout_height="wrap_content"
+            android:textSize="17dp" />
+    </LinearLayout>
+</RelativeLayout>

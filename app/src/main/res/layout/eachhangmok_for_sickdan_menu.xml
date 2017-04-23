@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="#ffffe3"
+        android:paddingBottom="12dp"
+        android:paddingTop="6dp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:id="@+id/relative"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:background="#ffffe3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:id="@+id/menu_name"
+                android:layout_alignParentTop="true"
+                android:textSize="13dp"
+                android:textColor="#ff808080" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="price"
+                android:id="@+id/menu_price"
+                android:layout_column="55"
+                android:layout_gravity="center_horizontal"
+                android:textSize="13dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="#ff808080" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

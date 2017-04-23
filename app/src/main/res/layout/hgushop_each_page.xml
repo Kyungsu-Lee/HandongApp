@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ghost.android.ghosthguapp.hgushop.HgushopEachPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/green"
+        android:id="@+id/hgushop_actionbar_each"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/hgushop"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/hgushop_title"
+                android:textSize="23sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btn_hgushop_call"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/call_button_selector_hgushop"
+            android:scaleType="fitCenter"
+            android:background="#00FFFFFF"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hgushop_actionbar_each"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="20dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/hgushop_maininfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/hgushop_photo"
+                android:layout_width="190dp"
+                android:layout_height="140dp"
+                android:src="@drawable/hgu"
+                android:scaleType="fitStart"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/hgushop_photo"
+                android:layout_toRightOf="@+id/hgushop_photo"
+                android:paddingLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hgushop_each_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:id="@+id/hgushop_each_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"/>
+                <TextView
+                    android:id="@+id/hgushop_each_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/hgushop_title_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hgushop_maininfo"
+            android:layout_marginTop="10dp"
+            android:text="@string/hgushop_title_contents"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/hgushop_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hgushop_title_contents"
+            android:layout_margin="10dp"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/hgushop_map_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hgushop_contents"
+            android:text="@string/hgushop_title_map"
+            android:textSize="15dp"/>
+
+        <net.daum.mf.map.api.MapView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/hgushop_each_map_view"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/hgushop_map_title"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

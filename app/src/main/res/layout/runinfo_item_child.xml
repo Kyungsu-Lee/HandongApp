@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ghost.android.ghosthguapp.common.AutoResizeTextView
+            android:id="@+id/runinfo_item_child_timetag"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="13dp"
+            android:textColor="@color/disabled"
+            android:text="운영시간 :" />
+
+        <ghost.android.ghosthguapp.common.AutoResizeTextView
+            android:id="@+id/runinfo_item_child_time"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="@color/disabled"
+            android:maxLines="5"
+            android:text="운영 시간 내용" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ghost.android.ghosthguapp.common.AutoResizeTextView
+            android:id="@+id/runinfo_item_child_notetag"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="13dp"
+            android:textColor="@color/disabled"
+            android:text="비      고 :" />
+
+        <ghost.android.ghosthguapp.common.AutoResizeTextView
+            android:id="@+id/runinfo_item_child_note"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="@color/disabled"
+            android:text="비고 내용" />
+    </LinearLayout>
+</LinearLayout>

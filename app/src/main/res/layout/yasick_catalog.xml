@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/yasick_selected"
+        android:id="@+id/yasick_catalog_actionbar"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/yasick_logo_rotated"
+            android:layout_toLeftOf="@+id/yasick_catalog_actionbar_title"
+            android:layout_centerVertical="true"
+            android:background="#00FFFFFF"/>
+        <TextView
+            android:id="@+id/yasick_catalog_actionbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/title_yasick_main"
+            android:textSize="23sp"
+            android:layout_gravity="center_vertical"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/yasick_catalog_actionbar_shadow"
+        android:layout_below="@+id/yasick_catalog_actionbar"
+        android:background="#DEBA50"/>
+
+    <ImageView
+        android:id="@+id/iv_catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/yasick_catalog_actionbar_shadow"/>
+</RelativeLayout>

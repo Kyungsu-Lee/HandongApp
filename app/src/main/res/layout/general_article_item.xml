@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:background="@drawable/listview_selector_yasick">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:textSize="13dp"
+        android:textColor="@color/notice_second_text"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="00000"
+        android:id="@+id/general_article_row_num"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="1dp"></LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="24"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/notice_article_title"
+        android:textColor="@color/black"
+        android:id="@+id/general_article_row_title"
+        android:textSize="15dp"/>
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="1dp"></LinearLayout>
+
+</LinearLayout>

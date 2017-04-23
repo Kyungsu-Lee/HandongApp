@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/chatroom_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="false">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noRoomTextView"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:text="방 없음"
+        android:gravity="top|center"
+        android:clickable="true"
+        android:textSize="16dp"
+        android:focusable="true"
+        android:layout_marginBottom="20dp" />
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:id="@+id/c_callButton"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/call_button_selector"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"/>
+
+    <LinearLayout
+        android:id="@+id/c_dividebar_call"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/c_callButton"
+        android:orientation="vertical"
+        android:layout_margin="0dp"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:id="@+id/c_border_call"
+            android:background="@color/transparent_yasick"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/c_layout_for_itemClick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/c_dividebar_call"
+        android:layout_centerVertical="true"
+        android:clickable="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/c_linearLayout2"
+            android:background="@drawable/listview_selector_yasick">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="이름"
+                android:textColor="@color/mildblack"
+                android:textSize="15dp"
+                android:id="@+id/calledstore_item_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="5dp"
+                android:text="통화시간"
+                android:textSize="13dp"
+                android:id="@+id/calledstore_item_date" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+

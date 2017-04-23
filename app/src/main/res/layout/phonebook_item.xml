@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/phonebook_item"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ghost.android.ghosthguapp.common.AutoResizeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="이름"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:textColor="@color/disabled"
+        android:id="@+id/phonebook_item_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="전화번호"
+        android:textSize="10dp"
+        android:singleLine="true"
+        android:textColor="@color/disabled"
+        android:id="@+id/phonebook_item_phone"
+        android:layout_below="@+id/phonebook_item_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="위치"
+        android:layout_margin="5dp"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:textColor="@color/disabled"
+        android:id="@+id/phonebook_item_category"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

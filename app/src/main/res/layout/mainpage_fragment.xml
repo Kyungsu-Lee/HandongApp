@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.8"
+        sl:scale_base_height="100"
+        sl:scale_base_width="200">
+
+        <ImageView
+            android:id="@+id/main_image_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/handong"
+            sl:scale_height="100"
+            sl:scale_left="0"
+            sl:scale_top="0"
+            sl:scale_width="200" />
+
+    </ghost.android.ghosthguapp.common.ScalableLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_main_upper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_main_yasick"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_yasick_1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    sl:scale_base_height="100"
+                    sl:scale_base_width="100">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/zzimdak"
+                        sl:scale_height="50"
+                        sl:scale_left="25"
+                        sl:scale_top="10"
+                        sl:scale_width="50" />
+
+                    <TextView
+                        android:id="@+id/btn_yasick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="한동야식"
+                        android:textColor="@color/white"
+                        sl:scale_height="20"
+                        sl:scale_left="10"
+                        sl:scale_textsize="15"
+                        sl:scale_top="70"
+                        sl:scale_width="80" />
+                </ghost.android.ghosthguapp.common.ScalableLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_main_launch"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_yasick_2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    sl:scale_base_height="100"
+                    sl:scale_base_width="100">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/hansick"
+                        sl:scale_height="50"
+                        sl:scale_left="25"
+                        sl:scale_top="10"
+                        sl:scale_width="50" />
+
+                    <TextView
+                        android:id="@+id/btn_launch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="식단"
+                        android:textColor="@color/white"
+                        sl:scale_height="20"
+                        sl:scale_left="10"
+                        sl:scale_textsize="15"
+                        sl:scale_top="70"
+                        sl:scale_width="80" />
+                </ghost.android.ghosthguapp.common.ScalableLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_main_bus_widget"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_bus_to_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bus_1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/main_bus" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="육거리행"
+                        android:textSize="15dp"
+                        android:textColor="@color/white" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:id="@+id/six_day_or_end"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="(평일)"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="3dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="학교"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="환호동"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="육거리"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_bus_six1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_bus_six2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_bus_six3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_bus_to_school"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bus_2"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/main_bus" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="학교행"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:id="@+id/school_day_or_end"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="(평일)"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="3dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="육거리"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="환호동"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="학교"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_bus_school1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_bus_school2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_bus_school3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_main_middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_main_notice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green_1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    sl:scale_base_height="100"
+                    sl:scale_base_width="100">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/notice_logo"
+                        sl:scale_height="40"
+                        sl:scale_left="30"
+                        sl:scale_top="15"
+                        sl:scale_width="40" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="공지사항"
+                        android:textColor="@color/white"
+                        sl:scale_height="20"
+                        sl:scale_left="10"
+                        sl:scale_textsize="15"
+                        sl:scale_top="65"
+                        sl:scale_width="80" />
+
+                </ghost.android.ghosthguapp.common.ScalableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_main_conv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green_2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    sl:scale_base_height="100"
+                    sl:scale_base_width="100">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/conv"
+                        sl:scale_height="40"
+                        sl:scale_left="30"
+                        sl:scale_top="15"
+                        sl:scale_width="40" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="편의정보"
+                        android:textColor="@color/white"
+                        sl:scale_height="20"
+                        sl:scale_left="10"
+                        sl:scale_textsize="15"
+                        sl:scale_top="65"
+                        sl:scale_width="80" />
+                </ghost.android.ghosthguapp.common.ScalableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_main_hgutube"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green_3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    sl:scale_base_height="100"
+                    sl:scale_base_width="100">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/hgutube"
+                        sl:scale_height="40"
+                        sl:scale_left="30"
+                        sl:scale_top="15"
+                        sl:scale_width="40" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="HguTube"
+                        android:textColor="@color/white"
+                        sl:scale_height="20"
+                        sl:scale_left="10"
+                        sl:scale_textsize="15"
+                        sl:scale_top="65"
+                        sl:scale_width="80" />
+
+                </ghost.android.ghosthguapp.common.ScalableLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_main_hgushop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green_4"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    sl:scale_base_height="100"
+                    sl:scale_base_width="100">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/hgushop"
+                        sl:scale_height="40"
+                        sl:scale_left="30"
+                        sl:scale_top="15"
+                        sl:scale_width="40" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="HguShop"
+                        android:textColor="@color/white"
+                        sl:scale_height="20"
+                        sl:scale_left="10"
+                        sl:scale_textsize="15"
+                        sl:scale_top="65"
+                        sl:scale_width="80" />
+
+                </ghost.android.ghosthguapp.common.ScalableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_main_alarm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green_2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    sl:scale_base_height="100"
+                    sl:scale_base_width="100">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/main_alarm"
+                        sl:scale_height="40"
+                        sl:scale_left="30"
+                        sl:scale_top="15"
+                        sl:scale_width="40" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="한동알람"
+                        android:textColor="@color/white"
+                        sl:scale_height="20"
+                        sl:scale_left="10"
+                        sl:scale_textsize="15"
+                        sl:scale_top="65"
+                        sl:scale_width="80" />
+
+                </ghost.android.ghosthguapp.common.ScalableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_main_setting"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green_6"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    sl:scale_base_height="100"
+                    sl:scale_base_width="100">
+
+                    <ImageView
+                        android:id="@+id/main_setting_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/setting"
+                        sl:scale_height="40"
+                        sl:scale_left="30"
+                        sl:scale_top="15"
+                        sl:scale_width="40" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="설정"
+                        android:textColor="@color/white"
+                        sl:scale_height="20"
+                        sl:scale_left="10"
+                        sl:scale_textsize="15"
+                        sl:scale_top="65"
+                        sl:scale_width="80" />
+                </ghost.android.ghosthguapp.common.ScalableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_main_under"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/ll_main_timetable"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/selector_under_1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                sl:scale_base_height="100"
+                sl:scale_base_width="100">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/left"
+                    sl:scale_height="100"
+                    sl:scale_left="0"
+                    sl:scale_top="0"
+                    sl:scale_width="20" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/timetable"
+                    sl:scale_height="50"
+                    sl:scale_left="25"
+                    sl:scale_top="10"
+                    sl:scale_width="50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="시간표"
+                    android:textColor="@color/white"
+                    sl:scale_height="20"
+                    sl:scale_left="25"
+                    sl:scale_textsize="15"
+                    sl:scale_top="65"
+                    sl:scale_width="50" />
+            </ghost.android.ghosthguapp.common.ScalableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/selector_under_2"
+            android:gravity="center">
+
+            <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                sl:scale_base_height="100"
+                sl:scale_base_width="200">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ghost_logo_white"
+                    sl:scale_height="75"
+                    sl:scale_left="25"
+                    sl:scale_top="12"
+                    sl:scale_width="150" />
+
+            </ghost.android.ghosthguapp.common.ScalableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_main_ddosuni"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/selector_under_3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ghost.android.ghosthguapp.common.ScalableLayout xmlns:sl="http://schemas.android.com/apk/res/ghost.android.ghosthguapp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                sl:scale_base_height="100"
+                sl:scale_base_width="100">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/home"
+                    sl:scale_height="40"
+                    sl:scale_left="30"
+                    sl:scale_top="15"
+                    sl:scale_width="40"
+                    android:id="@+id/ddosuniLogo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="또순이"
+                    android:textColor="@color/white"
+                    sl:scale_height="20"
+                    sl:scale_left="10"
+                    sl:scale_textsize="15"
+                    sl:scale_top="65"
+                    sl:scale_width="80"
+                    android:id="@+id/ddosuniText" />
+            </ghost.android.ghosthguapp.common.ScalableLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ghost.android.ghosthguapp.notice.ClassNoticeFragment"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/class_spinners_layout">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/class_spinner_year"
+            android:spinnerMode="dropdown"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/class_spinner_semester"
+            android:spinnerMode="dropdown"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:id="@+id/class_spinner_subject"
+            android:spinnerMode="dropdown"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/class_bottombar_layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="2dp">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center">
+
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:id="@+id/class_btn_left"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/left_arrow"
+            android:scaleType="fitCenter"
+            android:padding="7dp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:text="@string/page_1"
+            android:id="@+id/class_btn_1"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/page_button_default"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:text="@string/page_2"
+            android:id="@+id/class_btn_2"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/page_button_default"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:text="@string/page_3"
+            android:id="@+id/class_btn_3"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/page_button_default"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:text="@string/page_4"
+            android:id="@+id/class_btn_4"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/page_button_default"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+            android:text="@string/page_5"
+            android:id="@+id/class_btn_5"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/page_button_default"
+            android:visibility="invisible"/>
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="40dp"
+
+            android:id="@+id/class_btn_right"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/right_arrow"
+            android:scaleType="fitCenter"
+            android:padding="7dp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/class_category_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/class_spinners_layout">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:gravity="center"
+            android:text="@string/notice_article_num"
+            android:id="@+id/class_tv_list_num"
+            android:textColor="@color/notice_second_text"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:textSize="13dp"
+            android:gravity="center"
+            android:text="@string/notice_article_title"
+            android:id="@+id/class_tv_list_title"
+            android:textColor="@color/notice_second_text"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textSize="13dp"
+            android:gravity="center"
+            android:text="@string/notice_article_date"
+            android:id="@+id/class_tv_list_date"
+            android:textColor="@color/notice_second_text"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/class_article_listview"
+        android:layout_below="@id/class_category_bar"
+        android:layout_marginBottom="42dp"
+        android:fadeScrollbars="false"/>
+
+</RelativeLayout>

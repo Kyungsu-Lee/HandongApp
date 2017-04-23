@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp"
+    android:background="@drawable/listview_selector_yasick">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:text="@string/notice_article_title"
+        android:id="@+id/hw_article_row_title"
+        android:gravity="center_vertical"
+        android:textSize="15dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="14"
+        android:textSize="13dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/notice_article_submitdue"
+        android:textColor="@color/black"
+        android:id="@+id/hw_article_row_submitdue"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="14"
+        android:textSize="13dp"
+        android:textColor="@color/notice_second_text"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/notice_article_submitstatus"
+        android:id="@+id/hw_article_row_submitstatus"
+        android:gravity="center"/>
+</LinearLayout>

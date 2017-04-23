@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="로타리"
+        android:id="@+id/rotary"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:textColor="#3C3C3B" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="한동대"
+        android:id="@+id/hgu"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:textColor="#3C3C3B" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="곡강"
+        android:id="@+id/gokgang"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:textColor="#3C3C3B" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="흥해"
+        android:id="@+id/heunghae"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:textColor="#3C3C3B" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "carpool_spots_list1">
+        <item>출발지 선택</item>
+        <item>육거리</item>
+        <item>양덕</item>
+        <item>포항역</item>
+        <item>한동대</item>
+        <item>환호동</item>
+        <item>북부해수욕장</item>
+        <item>시외버스터미널</item>
+        <item>고속버스터미널</item>
+    </string-array>
+
+    <string-array name = "carpool_spots_list2">
+        <item>목적지 선택</item>
+        <item>육거리</item>
+        <item>양덕</item>
+        <item>포항역</item>
+        <item>한동대</item>
+        <item>환호동</item>
+        <item>북부해수욕장</item>
+        <item>시외버스터미널</item>
+        <item>고속버스터미널</item>
+    </string-array>
+
+    <string-array name="phone_category_list">
+        <item>전체</item>//0
+        <item>현동</item>//1
+        <item>느헤미야</item>//2
+        <item>뉴턴</item>//3
+        <item>언어교육원</item>//4
+        <item>학관</item>//5
+        <item>기숙사</item>//6
+        <item>오석관</item>//7
+        <item>올네이션스</item>//8
+        <item>기타</item>//9
+    </string-array>
+
+    <string-array name="major_list">
+        <item>전체</item>//0
+        <item>경경</item>//1
+        <item>공시</item>//2
+        <item>국제</item>//3
+        <item>GLS</item>//4
+        <item>GEA</item>//5
+        <item>기계</item>//6
+        <item>법</item>//7
+        <item>산업교육학부</item>//8
+        <item>산디</item>//9
+        <item>상사</item>//10
+        <item>생명</item>//11
+        <item>언정</item>//12
+        <item>전전</item>//13
+        <item>ICT</item>//14
+    </string-array>
+
+    <string-array name="hgushop_location_list">
+        <item>전체</item>//0
+        <item>장성/양덕/환여동</item>//1
+        <item>육거리</item>//2
+        <item>기타</item>//3
+    </string-array>
+
+    <string-array name="hgushop_category_list">
+        <item>전체</item>//0
+        <item>음식점</item>//1
+        <item>뷰티</item>//2
+        <item>까페/베이커리</item>//3
+        <item>엔터테인먼트</item>//4
+        <item>기타</item>//5
+        <item>병원</item>//6
+    </string-array>
+
+
+    <!-- 인덱스 순서 바뀔 떄는 HgutubeAdapter.java 의 상수 값만 바꿔주면 됩니다 -->
+    <string-array name="hgutube_category_list">
+        <item>최신</item>//0
+        <item>강연</item>//1
+        <item>지식</item>//2
+        <item>공연</item>//3
+        <item>홍보</item>//4
+        <item>신앙</item>//5
+        <item>기타</item>//6
+    </string-array>
+
+    <string-array name="carpool_location">
+
+        <item>한동대</item>
+
+        <item>양덕/세차장</item>
+
+        <item>양덕/하나로</item>
+
+        <item>양덕/E1</item>
+
+        <item>환호동</item>
+
+        <item>북부해수욕장</item>
+
+        <item>육거리</item>
+
+        <item>고속버스 터미널</item>
+
+        <item>시외버스 터미널</item>
+
+        <item>포항역</item>
+
+    </string-array>
+
+    <string-array name="carpool_crewNum">
+
+        <item>3</item>
+
+        <item>2</item>
+
+        <item>1</item>
+
+    </string-array>
+
+
+</resources>

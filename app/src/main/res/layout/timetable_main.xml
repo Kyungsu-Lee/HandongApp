@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tt_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/timetable_actionbar"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/tt_actionbar_hide"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/up"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tt_actionbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/time_table"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tt_actionbar_title"
+            android:scaleType="fitCenter"
+            android:src="@drawable/timetable" />
+
+        <ImageButton
+            android:id="@+id/tt_actionbar_update"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/tt_update_selector"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/tt_actionbar_insert"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/tt_actionbar_update"
+            android:background="@drawable/tt_insert_selector"
+            android:scaleType="fitCenter" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/tt_actionbar_show"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/hidden"
+        android:clickable="false"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tt_actionbar_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tt_actionbar"
+        android:background="@color/text_grey" />
+
+    <RelativeLayout
+        android:id="@+id/tt_headerNtable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tt_actionbar_line">
+
+        <TableLayout
+            android:id="@+id/tt_main_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:id="@+id/tt_main_header_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_backgroud">
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5" />
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="MON"
+                    android:textSize="9dp" />
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="TUE"
+                    android:textSize="9dp" />
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="WED"
+                    android:textSize="9dp" />
+
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="THU"
+                    android:textSize="9dp" />
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="FRI"
+                    android:textSize="9dp" />
+
+                <ghost.android.ghosthguapp.common.AutoResizeTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="SAT"
+                    android:textSize="9dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_header_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:gravity="center"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="0.5dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="0.5dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="0.5dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="0.5dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="0.5dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="0.5dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:paddingLeft="0.5dp"
+                    android:paddingRight="1dp" />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
+            android:id="@+id/tt_main_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tt_main_header"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:id="@+id/tt_main_row0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="08:30\n~09:45"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r1c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 1교시">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tt_r1c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 1교시">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r1c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 1교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r1c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 1교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r1c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 1교시"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r1c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 1교시"></LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="10:00\n~11:15"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r2c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 2교시">
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tt_r2c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 2교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r2c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 2교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r2c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 2교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r2c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 2교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r2c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 2교시">
+
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:orientation="vertical">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="11:30\n~12:45"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r3c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 3교시">
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tt_r3c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 3교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r3c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 3교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r3c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 3교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r3c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 3교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r3c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 3교시">
+
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:orientation="vertical">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="13:00\n~14:15"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r4c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 4교시">
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tt_r4c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 4교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r4c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 4교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r4c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 4교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r4c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 4교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r4c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 4교시">
+
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:orientation="vertical">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="14:30\n~15:45"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r5c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 5교시">
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tt_r5c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 5교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r5c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 5교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r5c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 5교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r5c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 5교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r5c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 5교시">
+
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:orientation="vertical">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="16:00\n~17:15"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r6c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 6교시">
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tt_r6c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 6교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r6c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 6교시"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r6c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 6교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r6c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 6교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r6c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 6교시">
+
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:orientation="vertical">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="7"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="17:30\n~18:45"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r7c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 7교시">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r7c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 7교시">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r7c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 7교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r7c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 7교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r7c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 7교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r7c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 7교시">
+
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:orientation="vertical">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="8"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="19:00\n~20:15"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r8c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 8교시">
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tt_r8c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 8교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r8c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 8교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r8c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 8교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r8c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 8교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r8c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 8교시">
+
+
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/tt_main_row9"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:orientation="vertical">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="20:30\n~21:45"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r9c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 9교시">
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tt_r9c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 9교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r9c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 9교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r9c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 9교시">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r9c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 9교시">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r9c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 9교시">
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tt_main_row10"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/text_grey">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/default_backgroud"
+                    android:orientation="vertical">
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textSize="12dp" />
+
+                    <ghost.android.ghosthguapp.common.AutoResizeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:text="22:00\n~23:15"
+                        android:textSize="7dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r10c1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="월요일 10교시">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r10c2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="화요일 10교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r10c3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="수요일 10교시">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r10c4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="목요일 10교시">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r10c5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="금요일 10교시">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tt_r10c6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:tag="토요일 10교시">
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/tt_option_menu"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/opmenu"
+        android:scaleType="fitCenter"/>
+</RelativeLayout>

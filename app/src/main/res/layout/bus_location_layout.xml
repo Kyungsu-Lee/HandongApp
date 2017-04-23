@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+    <net.daum.mf.map.api.MapView android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/map_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="where"
+        android:id="@+id/where"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#ffffffff"
+        android:textIsSelectable="false"
+        android:background="#FF4081"
+        android:padding="10dp" />
+</RelativeLayout>

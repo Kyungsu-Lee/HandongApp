@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ghost.android.ghosthguapp.carpool.chat_room.chat_roomActivity">
+    <item
+        android:id="@+id/call"
+        android:icon="@drawable/chaticon_call"
+        android:title="call to taxi"
+        app:showAsAction="withText|ifRoom"/>
+    <item android:id="@+id/action_example"
+        android:icon="@drawable/chaticon_menu"
+        android:title="show slide"
+        app:showAsAction="withText|ifRoom" />
+</menu>

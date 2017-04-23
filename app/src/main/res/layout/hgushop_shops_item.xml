@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp"
+    android:background="@drawable/listview_selector_hgushop">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/hgushop_next"
+        android:layout_toLeftOf="@+id/hgushop_next">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hgushop_shopname"
+            android:id="@+id/hgushop_row_name"
+            android:textSize="16dp"
+            android:textColor="@color/mildblack"
+            android:layout_marginBottom="2dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/hgushop_row_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hgushop_info"
+            android:textSize="13dp"
+            android:textColor="@color/mildblack"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/hgushop_next"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/hgushop_arrow"
+        android:layout_marginRight="4dp"/>
+</RelativeLayout>

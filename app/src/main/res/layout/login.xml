@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/login_handong_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/lo_login_tv_id"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/handong" />
+
+
+    <TextView
+        android:id="@+id/lo_login_tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lo_login_et_id"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/login_id" />
+
+    <EditText
+        android:id="@+id/lo_login_et_id"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/lo_login_tv_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lo_login_et_id"
+        android:layout_marginLeft="10dp"
+        android:text="@string/login_password" />
+
+    <EditText
+        android:id="@+id/lo_login_et_pw"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/lo_login_tv_pw"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textStyle="normal"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/lo_login_tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lo_login_bt_login"
+        android:layout_centerHorizontal="true"
+        android:textSize="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/login_guide"/>
+
+    <Button
+        android:id="@+id/lo_login_bt_login"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/login_ghost_logo"
+        android:background="@drawable/login_btn_selector"
+        android:text="로그인" />
+
+    <ImageView
+        android:id="@+id/login_ghost_logo"
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ghost_logo" />
+
+</RelativeLayout>

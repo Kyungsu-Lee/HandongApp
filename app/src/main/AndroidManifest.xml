@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ghost.android.ghosthguapp" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    .permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <permission
+        android:name="ghost.android.ghosthguapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="ghost.android.ghosthguapp.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/hgu_icon"
+        android:label="@string/app_name"
+        android:theme="@style/YasickActionBarTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".sickdan.Tabs_for_sickdan"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".alarm.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.android.alarmclock.ALARM_ALERT" />
+                <action android:name="alarm_killed" />
+                <action android:name="cancel_snooze" />
+                <action android:name="android.intent.action.POWER_CONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".alarm.BootReceiver" >
+            <intent-filter>
+                <action android:name="com.android.alarmclock.ALARM_ALERT" />
+                <action android:name="alarm_killed" />
+                <action android:name="cancel_snooze" />
+                <action android:name="android.intent.action.POWER_CONNECTED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".bus.Bus_alarm_receiver" >
+            <intent-filter>
+                <action android:name="com.android.alarmclock.ALARM_ALERT" />
+                <action android:name="alarm_killed" />
+                <action android:name="cancel_snooze" />
+                <action android:name="android.intent.action.POWER_CONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".convenient.Convenient"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ddosuni.Ddosuni"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".alarm.Alarm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hisnetgo.Hisnetgo123"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".alarm.AlarmPage"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_alarm_page"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bus.Bus_alarm_page"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_alarm_page"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bus.Tabs_for_bus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bus.Bus_to_heunghae"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".yasick.YasickMain"
+            android:label="@string/title_yasick_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".yasick.MyMenu"
+            android:label="@string/title_yasick_my_menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".yasick.YasickStorePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".yasick.YasickStoreCatalogPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GhostActionBarActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="android.support.v7.app.ActionBarActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.support.v7.app.ActionBarActivity" />
+        </activity>
+        <activity
+            android:name=".notice.NoticeMain"
+            android:label="@string/title_activity_notice_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notice.NoticeContents"
+            android:label="@string/title_activity_notice_contents"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notice.GeneralNoticeContents"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bus.Bus_to_school_location"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bus.Bus_to_yookgeory_location"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".yasick.CallCountService"
+            android:exported="false" />
+
+        <activity
+            android:name=".setting.Setting"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hgushop.Hgushop"
+            android:label="@string/title_activity_hgushop"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".timetable_widget.TimeTableWidget"
+            android:label="한동시간표" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/timetable_widget_config" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".bus_widget.BusWidgetSix"
+            android:label="육거리행 버스" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/bus_widget_config" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".bus_widget.BusWidgetSchool"
+            android:label="학교행 버스" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/bus_widget_config" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".hgushop.HgushopMap"
+            android:label="@string/title_activity_hgushop_map"
+            android:screenOrientation="portrait"
+            android:theme="@style/YasickActionBarTheme" />
+        <activity
+            android:name=".hgushop.HgushopEachPage"
+            android:label="@string/title_activity_hgushop_each_page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hgutube.Hgutube"
+            android:label="@string/title_activity_hgutube"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".hgushop.HgushopBetweenPage"
+            android:label="@string/title_activity_hgushop_between_page"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

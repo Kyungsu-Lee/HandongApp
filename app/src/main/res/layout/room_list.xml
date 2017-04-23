@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chatroom_list_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation ="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="#fff27c73">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/chaticon_back"
+            android:onClick="onExitClicked"
+            android:id="@+id/button3"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView27"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:text="방목록" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:onClick="onMyRoomClicked"
+
+            android:background="@drawable/btn_mypage"
+            android:id="@+id/imageButton6"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_list_spinners"
+        android:orientation="horizontal"
+        android:background="@drawable/roomlist_round"
+        android:gravity="center"
+        android:layout_margin="5dp">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="11"
+            android:id="@+id/starting_spot_spinner"
+            android:spinnerMode="dropdown"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="11"
+            android:id="@+id/destination_spot_spinner"
+            android:spinnerMode="dropdown"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/chat_list_betweenSpinner2" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/Linear1">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/button2"
+                android:onClick="onSearchButtonClicked"
+                android:background="@drawable/btn_search" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageButton4"
+                android:onClick="onRefrashButtonClicked"
+                android:background="@drawable/btn_refrash"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="3dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="방번호"
+            android:id="@+id/textView26"
+            android:textSize="12dp"
+            android:layout_weight="1.9"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="출발시간"
+            android:id="@+id/textView21"
+            android:layout_weight="1.65"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="경로"
+            android:id="@+id/textView23"
+            android:layout_weight="1.2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.65"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="인원수"
+                android:id="@+id/textView24"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="(현재인원/모집인원)"
+                android:id="@+id/textView25"
+                android:textSize="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView android:id="@+id/roomlist_main_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:paddingBottom="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:id="@+id/Button8"
+            android:background="@drawable/car_room_add"
+            android:layout_marginRight="6dp"
+            android:layout_marginEnd="55dp"
+            android:onClick="making_chat"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:paddingBottom="5dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

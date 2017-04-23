@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+    defaultConfig {
+        applicationId "ghost.android.ghosthguapp"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 14
+        versionName "6.1.4"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            debuggable false
+        }
+    }
+    productFlavors {
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.google.android.gms:play-services:6.5.87'
+    compile 'com.prolificinteractive:material-calendarview:0.7.0'
+    compile files('libs/libDaumMapAndroid.jar')
+    compile files('libs/libDaumMapEngineApi.jar')
+}

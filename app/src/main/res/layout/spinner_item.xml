@@ -1,0 +1,13 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinner_item_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="17dp"
+    android:textColor="@color/mildblack"
+    android:background="@color/white"
+    android:padding="7dp"
+    android:maxLines="1"
+    android:ellipsize="none">
+
+</TextView>
